@@ -9,7 +9,7 @@ import { app, server } from "./lib/socket.js";
 import path from "path";
 
 dotenv.config();
-__dirname = path.resolve();
+const __dirname = path.resolve();
 app.use(express.json({ limit: '5mb' }));
 app.use(express.urlencoded({ limit: '5mb', extended: true }));
 app.use(cookieParser());
